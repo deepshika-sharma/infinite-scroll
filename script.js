@@ -18,6 +18,7 @@ let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=
 let imgUrl = "";
 let alt = "";
 
+// Update API with new count
 const updateAPICount = (newCount) => {
   apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${newCount}`;
 };
@@ -25,8 +26,6 @@ const updateAPICount = (newCount) => {
 // Check if all images were loaded
 const imageLoaded = () => {
   imagesLoaded++;
-  //   console.log("imagesLoaded: ", imagesLoaded);
-
   if (imagesLoaded === totalImages) {
     ready = true;
     loader.hidden = true;
